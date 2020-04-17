@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Curso JS</title>
+</head>
+<body>
+  <ul id='list'>
+    
+  </ul>
+
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];      
+    var list = document.getElementById('list');
+        
+    nomes.forEach(element => {
+      var itens = document.createElement('li');     
+      itens.textContent = element;
+      list.appendChild(itens);       
+    });
+  </script>
+</body>
+</html>

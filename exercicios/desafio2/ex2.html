@@ -1,0 +1,54 @@
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Starter</title>
+</head>
+<body>
+    <div id="square">
+        <button id="btn" onclick="createSquare()">Adicionar</button>
+        <div class="box">
+            
+        </div>               
+    </div>
+   
+    <script>
+        var boxElement = document.querySelector('.box');
+        var element = document.createElement("div");          
+        function createSquare(){                      
+            element = document.createElement("div");           
+            element.setAttribute('class','el');
+            element.style.width = 100;
+            element.style.height = 100;        
+            element.style.backgroundColor = '#F00';
+            element.style.position = 'relative';
+            element.style.bottom = Math.random(1,100)*10;
+            element.style.top = Math.random(1,100)*10;
+            element.style.left = Math.random(1,100)*1000;
+            element.style.rigth = Math.random(1,100)*1000;               
+        
+            document.body.appendChild(element);
+        }
+        
+        function getRandomColor() {
+          var letters = "0123456789ABCDEF";
+          var color = "#";
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+         // #E943F0
+
+        createSquare()
+        
+        
+        
+
+
+        
+            
+        
+    </script>
+</body>
+
+</html> 
