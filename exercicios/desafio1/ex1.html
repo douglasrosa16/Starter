@@ -1,0 +1,33 @@
+<!--Crie uma função que dado o objeto a seguir:
+   var endereco = {  rua: "Rua dos pinheiros",  numero: 1293,  bairro: "Centro",  cidade: "São Paulo",  uf: "SP" };
+Retorne isso: O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com nº 1293   
+<-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1</title>
+</head>
+<script>
+    function concat(obj){
+        return console.log("O usuário mora em " + obj.cidade + "/" + obj.uf + ", no bairro " + obj.bairro + ", na rua " + obj.rua + " com nº " + obj.numero);
+    }
+
+    var endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+    };
+
+    concat(endereco);
+
+</script>
+<body>
+    
+</body>
+</html>
+
+
