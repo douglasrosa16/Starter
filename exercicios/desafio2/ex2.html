@@ -14,7 +14,9 @@
     <script>
         var boxElement = document.querySelector('.box');
         var element = document.createElement("div");          
-        function createSquare(){                      
+
+        function createSquare(){          
+                        
             element = document.createElement("div");           
             element.setAttribute('class','el');
             element.style.width = 100;
@@ -24,7 +26,7 @@
             element.style.bottom = Math.random(1,100)*10;
             element.style.top = Math.random(1,100)*10;
             element.style.left = Math.random(1,100)*1000;
-            element.style.rigth = Math.random(1,100)*1000;               
+            element.style.rigth = Math.random(1,100)*1000;                                
         
             document.body.appendChild(element);
         }
@@ -37,12 +39,12 @@
           }
           return color;
         }
-         // #E943F0
-
-        createSquare()
         
-        
-        
+        document.body.onclick = function() {
+            if (event.target.tagName === 'DIV'){
+                console.log('DIV')
+            }
+        }
 
 
         
