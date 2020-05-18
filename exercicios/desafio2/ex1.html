@@ -17,19 +17,16 @@
         function createSquare(){                      
             let element = document.createElement("div");
             element.style.width = 100;
-            element.style.height = 100;        
+            element.style.height = 100;      
+            element.style.position = 'relative'  
             element.style.backgroundColor = '#F00';
-            element.style.marginBottom = Math.random(1,100)*100;
-            element.style.marginTop = Math.random(1,100)*100;
-            element.style.marginLeft = Math.random(1,100)*100;
-            element.style.marginRigth = Math.random(1,100)*100;               
+            element.style.marginBottom = Math.random(1,100)*10;
+            element.style.marginTop = Math.random(1,100)*10;
+            element.style.marginLeft = Math.random(1,100)*1000;
+            element.style.marginRigth = Math.random(1,100)*1000;               
         
             document.body.appendChild(element);
-        }
-
-        
-            
-        
+        }      
     </script>
 </body>
 

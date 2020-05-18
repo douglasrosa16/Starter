@@ -5,29 +5,20 @@
 </head>
 <body>
     <div id="square">
-        <button id="btn" onclick="createSquare()">Adicionar</button>
-        <div class="box">
-            
-        </div>               
+        <button id="btn" onclick="createSquare()">Adicionar</button>                      
     </div>
    
-    <script>
-        var boxElement = document.querySelector('.box');
-        var element = document.createElement("div");          
-
+    <script>        
+        
         function createSquare(){          
-                        
-            element = document.createElement("div");           
-            element.setAttribute('class','el');
+            var element = document.createElement("div");                          
+            element = document.createElement("div");                       
             element.style.width = 100;
             element.style.height = 100;        
-            element.style.backgroundColor = '#F00';
-            element.style.position = 'relative';
-            element.style.bottom = Math.random(1,100)*10;
-            element.style.top = Math.random(1,100)*10;
-            element.style.left = Math.random(1,100)*1000;
-            element.style.rigth = Math.random(1,100)*1000;                                
-        
+            element.style.backgroundColor = '#F00';            
+            element.onmouseover = function (){
+                element.style.backgroundColor = getRandomColor();
+            }
             document.body.appendChild(element);
         }
         
@@ -38,18 +29,7 @@
             color += letters[Math.floor(Math.random() * 16)];
           }
           return color;
-        }
-        
-        document.body.onclick = function() {
-            if (event.target.tagName === 'DIV'){
-                console.log('DIV')
-            }
-        }
-
-
-        
-            
-        
+        }        
     </script>
 </body>
 
